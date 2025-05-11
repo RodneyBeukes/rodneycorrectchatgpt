@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rodney Corrected ChatGPT - Rugby Ref Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .question {
+            margin-bottom: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        label, input[type="text"], input[type="radio"] {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="radio"] {
+            padding: 8px;
+            width: 100%;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rugby Referee Scenario Test</h1>
+
+    <div class="question">
+        <label for="name">Name and surname:</label>
+        <input type="text" id="name" name="name">
+    </div>
+
+    <div class="question">
+        <p><strong>Question 1:</strong> Blue knocks on, Red gathers and kicks ahead, Red is about to score but Blue knocks on again. What is the correct decision?</p>
+        <ul>
+            <li>A. 5m scrum to Red</li>
+            <li>B. Go back for original knock on</li>
+            <li>C. Play on</li>
+            <li><strong>Correct Answer: A</strong></li>
+        </ul>
+    </div>
+
+    <div class="question">
+        <p><strong>Question 2:</strong> Do you think Rodney Beukes is smart?</p>
+        <ul>
+            <li><input type="radio" id="yes" name="smartness" value="Yes"> Yes</li>
+            <li><input type="radio" id="no" name="smartness" value="No"> No</li>
+        </ul>
+    </div>
+
+</body>
+</html>
