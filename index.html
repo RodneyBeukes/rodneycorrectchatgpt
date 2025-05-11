@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elite Rugby Referee Test</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f7f7f7; padding: 20px; }
+    .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h1 { text-align: center; }
+    .question { margin-bottom: 20px; }
+    .question h3 { margin: 10px 0; }
+    .options label { display: block; margin-bottom: 8px; }
+    .submit-btn { margin-top: 20px; background: #007BFF; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+    .submit-btn:hover { background: #0056b3; }
+    .result { font-weight: bold; margin-top: 20px; }
+    .credit { margin-top: 40px; font-style: italic; font-size: 0.9em; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Elite Rugby Referee Scenario Test</h1>
+    <form id="quizForm">
+      <div class="question">
+        <h3>1. Blue player kicks the ball from inside their 22. A red player in front catches it and steps into touch. What are the options?</h3>
+        <div class="options">
+          <label><input type="radio" name="q1" value="A"> Lineout to Blue where ball crossed the line</label>
+          <label><input type="radio" name="q1" value="B"> Lineout option to Blue or Red</label>
+          <label><input type="radio" name="q1" value="C"> Lineout to Red where it was stepped out</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>2. A Blue player kicks the ball and it rebounds off their own teammate’s knee forward. What is the decision?</h3>
+        <div class="options">
+          <label><input type="radio" name="q2" value="A"> Scrum Red (knock-on)</label>
+          <label><input type="radio" name="q2" value="B"> Play on (not a knock-on)</label>
+          <label><input type="radio" name="q2" value="C"> Penalty to Red</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <h3>3. Blue knocks on, Red takes the ball, kicks it ahead, and is about to score when Blue knocks on again near the try line. What is the decision?</h3>
+        <div class="options">
+          <label><input type="radio" name="q3" value="A"> Scrum Blue for first knock-on</label>
+          <label><input type="radio" name="q3" value="B"> Scrum Red for second knock-on</label>
+          <label><input type="radio" name="q3" value="C"> Lineout to Red where the ball was kicked</label>
+        </div>
+      </div>
+
+      <button type="button" class="submit-btn" onclick="checkAnswers()">Submit</button>
+      <div id="result" class="result"></div>
+      <div class="credit">Created by Rodney Peter Beukes in collaboration with ChatGPT</div>
+    </form>
+  </div>
+
+  <script>
+    function checkAnswers() {
+      const answers = {
+        q1: "B",
+        q2: "B",
+        q3: "B"
+      };
+      let score = 0;
+      const form = document.getElementById('quizForm');
+      Object.keys(answers).forEach(q => {
+        const userAnswer = form[q].value;
+        if (userAnswer === answers[q]) score++;
+      });
+      document.getElementById('result').innerText = `You got ${score} out of ${Object.keys(answers).length} correct.`;
+    }
+  </script>
+</body>
+</html>
+    
